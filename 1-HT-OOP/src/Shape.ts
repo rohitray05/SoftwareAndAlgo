@@ -7,10 +7,9 @@ export abstract class Shape {
     
     
     constructor(points?:Point[],color?:string,filled?:boolean);
-    constructor(points:Point[]=[new Point(4,5),new Point(6,8),new Point(6,10)],
+    constructor(points:Point[]=[],
                 color:string="green",
                 filled:boolean=true) {
-        //  What is meant by 3 points (2 points is just a line)? 
         if(points.length<3){
             throw new Error('Please Enter atleast 3 Points'); 
         }
@@ -23,9 +22,21 @@ export abstract class Shape {
       return `A Shape with color of ${this.color} and ${this.filled?'filled':'Not filled'}. Points: ${this.points.toString()}`
     }
 
-    getPerimeter(point:Point):number{
-    //Out of 3 points how to decide which 2 points taken in consideration for calculating dist?
-      return point.distance(point);
+    getPerimeter(points?:Point[]):number{
+      let perimeter:number=0;
+      if(!points){
+        this.points.forEach(data=>{
+            let p = new Point(data.x,data.y);
+            perimeter = perimeter + p.distance();
+          })
+      }else if(points){
+        points.forEach(data=>{
+            let p = new Point(data.x,data.y);
+            perimeter = perimeter + p.distance();
+          })
+      }
+      return perimeter;
     }
+
     abstract getType(): string;
 }

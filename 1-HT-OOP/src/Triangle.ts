@@ -19,12 +19,16 @@ export class Triangle extends Shape {
     getType():string{
       let type="";
       if(this.indices.length===3){
-          if(this.getPerimeter(this.indices[0])===this.getPerimeter(this.indices[1]) &&
-             this.getPerimeter(this.indices[1])=== this.getPerimeter(this.indices[2])){
+          let P1=new Point(this.indices[0].x,this.indices[0].y);
+          let P2=new Point(this.indices[1].x,this.indices[1].y);
+          let P3=new Point(this.indices[2].x,this.indices[2].y);
+
+          if(P1.distance(this.indices[1])===P2.distance(this.indices[2]) &&
+             P2.distance(this.indices[2])=== P3.distance(this.indices[0])){
              type="equilateral triangle";   
-          }else if(this.getPerimeter(this.indices[0]) != this.getPerimeter(this.indices[1]) &&
-                   this.getPerimeter(this.indices[1]) != this.getPerimeter(this.indices[2]) &&
-                   this.getPerimeter(this.indices[0]) != this.getPerimeter(this.indices[2])){
+          }else if(P1.distance(this.indices[1]) != P2.distance(this.indices[2]) &&
+                   P2.distance(this.indices[2]) != P3.distance(this.indices[0]) &&
+                   P3.distance(this.indices[0]) != P1.distance(this.indices[1])){
             type="scalene triangle"; 
           }else{
             type="isosceles triangle"; 
