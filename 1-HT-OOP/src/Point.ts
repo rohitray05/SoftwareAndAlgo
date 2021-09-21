@@ -18,15 +18,24 @@ export class Point {
     public distance():number;
    
     public distance(x?:number|Point,y?:number):number{
+        let dist = 0;
         if(!x && !y){
-            return Math.sqrt(Math.pow(this.x,2)+Math.pow(this.y,2));
+            dist = Math.sqrt(Math.pow(this.x,2)+Math.pow(this.y,2));
         }
         if(x instanceof Point){
-            return Math.sqrt(Math.pow((this.x-x?.x),2)+Math.pow((this.y-x?.y),2));
+            dist =  Math.sqrt(Math.pow((this.x-x?.x),2)+Math.pow((this.y-x?.y),2));
         }
         else if(y && x && typeof x === 'number'){
-            return Math.sqrt(Math.pow((this.x-x),2)+Math.pow((this.y-y),2));
+            dist =  Math.sqrt(Math.pow((this.x-x),2)+Math.pow((this.y-y),2));
         }
-        
+      return dist;
      }
 }
+
+
+/* 
+npm install @types/node --save-dev
+npx ts-node Point.ts   
+*/
+/* const point = new Point(1,2);
+console.log(point.y); */
