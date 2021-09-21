@@ -38,6 +38,10 @@ export class Triangle extends Shape {
     }
 }
 
+/* 
+npm install @types/node --save-dev
+npx ts-node Point.ts   
+*/
 const shape1 = new Triangle([new Point(1,1),new Point(2,3),new Point(-2,2)]);
 console.log(shape1.getType());
 const shape2 = new Triangle([new Point(-6,-2),new Point(-2,3),new Point(2,-2)]);
