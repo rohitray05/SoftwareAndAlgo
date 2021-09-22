@@ -5,7 +5,7 @@ import { Point } from '../src/Point';
 class TestShape extends Shape {}
 
 describe('Shape', () => {
-    const points = [new Point(0, 0), new Point(0, 3), new Point(4, 3)];
+    const points = [new Point(0,0), new Point(0,3), new Point(4,3)];
 
     it('should fail to be created with 2 points', () => {
         expect(() => new TestShape([new Point(0, 0), new Point(0, 3)])).toThrow();
