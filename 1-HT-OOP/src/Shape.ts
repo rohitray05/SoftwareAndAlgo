@@ -19,24 +19,33 @@ export abstract class Shape {
     }
     
     toString():string{
-      return `A Shape with color of ${this.color} and ${this.filled?'filled':'Not filled'}. Points: ${this.points.toString()}`
+      let pts = "";
+      this.points.forEach((point,index)=>{
+       if(index!=this.points.length-1){
+        pts = pts + `${point}, `
+       }else{
+        pts = pts + `${point}.`
+       }
+       
+      })
+      return `A Shape with color of ${this.color} and ${this.filled?'filled':'not filled'}. Points: ${pts}`
     }
 
     getPerimeter(points?:Point[]):number{
       let perimeter:number=0;
-      if(!points){
-        this.points.forEach(data=>{
-            let p = new Point(data.x,data.y);
-            perimeter = perimeter + p.distance();
-          })
-      }else if(points){
-        points.forEach(data=>{
-            let p = new Point(data.x,data.y);
-            perimeter = perimeter + p.distance();
-          })
-      }
+          console.log(points)
+          let P1=new Point(points[0].x,points[0].y);
+          let P2=new Point(points[1].x,points[1].y);
+          let P3=new Point(points[2].x,points[2].y);
+          let P1P2 = Math.round(P1.distance(points[1])*10)/10; 
+          let P2P3 = Math.round(P2.distance(points[2])*10)/10; 
+          let P3P1 = Math.round(P3.distance(points[0])*10)/10;
+          perimeter = P1P2+P2P3+P3P1;
+
       return perimeter;
     }
 
     abstract getType(): string;
 }
+
+
