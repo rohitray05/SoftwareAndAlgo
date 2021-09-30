@@ -6,13 +6,10 @@ export abstract class Item implements Comparable<Item> {
     
     numberOfitems:number;
     id:number;
-    value:number;
-    name:string;
-    weight:number;
-    constructor(name: string,value:number,weight:number) {
-        this.name = name;
-        this.value = value;
-        this.weight = weight;
+    private value:number;
+    private name:string;
+    private weight:number;
+    constructor() {
         this.id = id++;
     }
  
@@ -32,33 +29,36 @@ export abstract class Item implements Comparable<Item> {
      return `${this.name} − Value: ${this.value}, Weight: ${this.weight}`;
     }
 
-    public getValue():number{
+    get Value():number{
      return this.value;
     }
 
-    public setValue(price:number):void{
+    set Value(price:number){
      this.value=price;
     }
 
-    public getWeight():number{
+    get Weight():number{
      return this.weight;
     }
 
-    public setWeight(weight:number):void{
+    set Weight(weight:number){
      this.weight=weight;
     }
 
-    public getName():string{
+    get Name():string{
      return this.name;
     }
 
-    public setName(name:string):void{
+    set Name(name:string){
      this.name=name;
     }
 
     public reset():void{
       id=0;
     }
-
+    
+    public use():string{
+       return this.use();
+    }
     // your code goes here
 }
