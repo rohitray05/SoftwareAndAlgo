@@ -13,14 +13,17 @@ class Bow extends Weapon{
         durabilityModifier:number,
         modifier_change_rate:number
     ){
-        super(name,value,weight,baseDamage,
-              damageModifier,baseDurability,durabilityModifier,
-              modifier_change_rate)
+        super(name,value,weight)
+        this.BaseDamage = baseDamage;
+        this.DamageModifier = damageModifier;
+        this.BaseDurability = baseDurability;
+        this.DurabilityModifier = durabilityModifier;
+        this.Modifier_change_rate = modifier_change_rate;
     }
 
     public polish():void{
         if(this.effectiveDurability<1){
-           this.durabilityModifier+=this.modifier_change_rate
+           this.DurabilityModifier+=this.Modifier_change_rate
         }
     }
 

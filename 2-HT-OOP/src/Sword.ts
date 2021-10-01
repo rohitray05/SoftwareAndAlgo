@@ -17,7 +17,8 @@ export class Sword extends Weapon{
 
     public polish():void{
         this.Modifier_change_rate+=this.Modifier_change_rate;
-        /* How to increase the base damage by 25% ?? */
-        /* damageModifier by adding Weapon.MODIFIER_CHANGE_RATE each time polish() is called, up to 25% of the baseDamage value */
+        if(this.getDamage()<1){
+         this.BaseDamage += this.BaseDamage * 0.25
+        }
     }
 }
