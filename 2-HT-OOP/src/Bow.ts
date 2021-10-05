@@ -19,6 +19,7 @@ class Bow extends Weapon{
         this.BaseDurability = baseDurability;
         this.DurabilityModifier = durabilityModifier;
         this.Modifier_change_rate = modifier_change_rate;
+        
     }
 
     public polish():void{

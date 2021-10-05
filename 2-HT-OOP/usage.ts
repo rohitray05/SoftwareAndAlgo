@@ -37,3 +37,4 @@ console.log(inventory.toString());
 // Use the sword
 console.log(a.use());
 console.log(a.use());
+

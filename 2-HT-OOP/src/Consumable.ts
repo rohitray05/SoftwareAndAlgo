@@ -8,6 +8,7 @@ export class Consumable extends Item{
         super()
     }
     
+    
     public get Spoiled():boolean{
      return this.spoiled
     }

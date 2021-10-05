@@ -21,4 +21,5 @@ export class Sword extends Weapon{
          this.BaseDamage += this.BaseDamage * 0.25
         }
     }
+    
 }

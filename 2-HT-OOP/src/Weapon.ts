@@ -80,10 +80,8 @@ export class Weapon extends Item {
      }else if(this.effectiveDamage==0){
         str = `You use the ${this.Name} , dealing ${this.effectiveDamage} points of damage. . The ${this.Name} breaks.`;
      }else{
-         /* 
-            “Using” a Weapon lowers (subtracts) its effective durability by Weapon.MODIFIER CHANGE RATE. If the effective durability of the Weapon hits or drops below 0, the Weapon will ”break”. If the Weapon ”breaks”, the method should output the previous String, but additionally with a newline character and the additional text “The hammer breaks.”:
-             For a Weapon with the name of “hammer”, if it is “broken” (The effective durability is 0 or less), calling its use() method returns the following:
-         */
+      str = `You can't use the hammer , it is broken.`
+
      }
      
      return str;

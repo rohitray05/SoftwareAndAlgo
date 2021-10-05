@@ -1,6 +1,4 @@
 
-
-
 ### The Home Task 2 must be done using Typescript
 
 
