@@ -2,26 +2,34 @@ import { Item } from "./Item";
 
 // your code goes here
 export class Consumable extends Item{
-    spoiled:boolean;
+    private spoiled:boolean;
     consumed:boolean;
-    constructor(name:string,value:number,weight:number,spoiled:boolean){
-        super(name,value,weight)
-        this.spoiled=spoiled;
+    constructor(){
+        super()
     }
     
+    
+    public get Spoiled():boolean{
+     return this.spoiled
+    }
+
+    public set Spoiled(spoiled:boolean){
+     this.spoiled=spoiled;
+    }
+
     public eat(){
         if(this.consumed){
-          return `There is nothing left of the ${this.name} to consume.`  
+          return `There is nothing left of the ${this.Name} to consume.`  
         }else if(this.spoiled){
-          return `You eat the ${this.name}. You feel sick.`  
+          return `You eat the ${this.Name}. You feel sick.`  
         }
         else{
-          return `You eat the ${this.name}.`
+          return `You eat the ${this.Name}.`
         }
     }
-    public use(){
+    public use():string{
         if(!this.spoiled && !this.consumed){
-          this.eat()
+         return this.eat()
         }
     }
 

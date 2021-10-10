@@ -1,3 +1,9 @@
+import { Inventory } from "./src/Inventory";
+import { Item } from "./src/Item";
+import { ItemWeightComparator } from "./src/ItemWeightComparator";
+import { Pizza } from "./src/Pizza";
+import { Sword } from "./src/Sword";
+
 // Create the inventory
 const inventory: Inventory = new Inventory();
 
@@ -31,3 +37,4 @@ console.log(inventory.toString());
 // Use the sword
 console.log(a.use());
 console.log(a.use());
+

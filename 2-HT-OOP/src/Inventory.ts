@@ -3,8 +3,9 @@
 import { Item } from "./Item";
 import { ItemComparator } from "./ItemComparator";
 
-class Inventory{
+export class Inventory{
 
+    
     items:Array<Item>
     
     constructor(){}
@@ -16,11 +17,11 @@ class Inventory{
     public sort(comparator?: ItemComparator):void{
     if(comparator){
         this.items.sort((item1,item2)=>{
-            return item1.weight - item2.weight;
+            return item1.Weight - item2.Weight;
         })
     }else{
         this.items.sort((item1,item2)=>{
-            return item1.value - item2.value;
+            return item1.Value - item2.Value;
         }) 
     }
     }

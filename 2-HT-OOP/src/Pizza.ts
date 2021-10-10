@@ -2,12 +2,13 @@
 
 import { Consumable } from "./Consumable";
 
-class Pizza extends Consumable{
+export class Pizza extends Consumable{
     numberOfSlices:number;
     slicesEaten:number;
-    constructor(name:string="Pizza",value:number,weight:number,
-                numberOfSlices:number,spoiled:boolean){
-    super(name,value,weight,spoiled)
+    constructor(numberOfSlices:number,spoiled:boolean){
+    super()
+    this.Name = "Pizza";
+    this.Spoiled = spoiled;
     this.numberOfSlices=numberOfSlices;
     }
 
@@ -16,10 +17,11 @@ class Pizza extends Consumable{
      if(this.slicesEaten < this.numberOfSlices){
          this.slicesEaten++;
          if(this.slicesEaten >= this.numberOfSlices){
-           str = `You eat a slice of the ${this.name}`
+           str = `You eat a slice of the ${this.Name}`
          }
      }
      return str;
     }
 
+    
 }
