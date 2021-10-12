@@ -1,7 +1,16 @@
+import { Mixin } from "./Mixin";
 import { Page } from "./Page";
 import { Pages } from "./Pages";
 
-class Book implements IterableIterator<String> {
+class Book extends Mixin{
+  constructor(title:string,author:string,pages: Pages){
+    super(title,author,pages,'Book')
+  }
+} 
+
+
+
+/* class Book implements IterableIterator<String> {
   private pointer = 0;
   constructor(public title:string,public author:string,public pages: Pages) {}
   public next(): IteratorResult<String> {
@@ -23,7 +32,9 @@ class Book implements IterableIterator<String> {
     return this;
   }
   
-}
+} */
+
+
 
 
 const book = new Book('Harry Potter', 'J. K. Rowling', new Pages([
