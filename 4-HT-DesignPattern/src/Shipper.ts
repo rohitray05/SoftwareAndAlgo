@@ -8,7 +8,9 @@ export interface Shipper{
 }
 
 export class ShipperFactory {
+
   static getShippingCost(fromZipCode:string,weight:number):Shipper{
+    
     let startsWith = fromZipCode.charAt(0);
     if(['1','2','3'].includes(startsWith)){
       return new AirEastShipper(weight) 
