@@ -1,14 +1,20 @@
-export class AirEastShipper{
+import { Shipper } from "./Shipper";
+
+export class AirEastShipper implements Shipper{
     private letter = 0.39;
     private package = 0.25;
-    getCost(weight:number):number{
+    public weight:number;
+    constructor(weight:number){
+    this.weight = weight;
+    }
+    getCost( ):number{
       let cost  = 0;
-      if(weight<=15){
-        cost = weight*this.letter;
-      }else if(weight>=15 && weight<=160){
-        cost = weight*this.package;
+      if(this.weight<=15){
+        cost = this.weight*this.letter;
+      }else if(this.weight>=15 && this.weight<=160){
+        cost = this.weight*this.package;
       }else {
-        cost = 10+(weight*this.letter);
+        cost = 10+(this.weight*this.letter);
       }
       return cost;  
     }

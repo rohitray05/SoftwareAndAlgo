@@ -1,4 +1,4 @@
-import { Shipper } from "./Shipper";
+import { Shipper, ShipperFactory } from "./Shipper";
 
 export interface State {
     shipmentId: number;
@@ -92,7 +92,8 @@ export class Shipment{
     }
   
     public ship():string{
-        this._cost = new Shipper().getCost(this._fromzipCode,this._weight)
+        let shipper = ShipperFactory.getShippingCost(this._fromzipCode,this._weight)
+        this._cost = shipper.getCost();
         return `the shipment ID : ${this.shipmentId}, item sent from ${this.fromAddress}, it is going ${this.toAddress}, and how much the cost is ${this._cost}`
     }
 }
