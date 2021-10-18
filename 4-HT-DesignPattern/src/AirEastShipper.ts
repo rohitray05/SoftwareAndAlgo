@@ -1,9 +1,10 @@
 import { Shipper } from "./Shipper";
 
 export class AirEastShipper implements Shipper{
-    private letter = 0.39;
-    private package = 0.25;
     public weight:number;
+    private letter:number = 0.39;
+    private package:number = 0.25;
+  
     constructor(weight:number){
     this.weight = weight;
     }
