@@ -1,7 +1,9 @@
-import { Letter, Oversized, Package } from "./Type";
 
 export class PacificParcel{
     public weight:number;
+    private letter:number = 0.52;
+    private package:number = 0.19;
+
     constructor(weight:number){
     this.weight = weight;
     }
@@ -9,11 +11,11 @@ export class PacificParcel{
     getCost():number{
       let cost  = 0
       if(this.weight<=15){
-        cost = new Letter().getCost('PacificParcel',this.weight)
+        cost = this.weight*this.letter;
       }else if(this.weight>=15 && this.weight<=160){
-        cost = new Package().getCost('PacificParcel',this.weight)
+        cost = this.weight*this.package;
       }else{
-        cost = new Oversized().getCost('PacificParcel',this.weight)
+        cost = this.weight*this.letter + this.weight*0.02;
       }
       return cost;  
     }

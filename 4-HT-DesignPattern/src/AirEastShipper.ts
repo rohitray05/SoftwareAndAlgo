@@ -1,7 +1,8 @@
-import { Letter, Oversized, Package } from "./Type";
-
 export class AirEastShipper{
     public weight:number;
+    private letter:number = 0.39;
+    private package:number = 0.25;
+  
     constructor(weight:number){
     this.weight = weight;
     }
@@ -9,11 +10,11 @@ export class AirEastShipper{
     getCost():number{
       let cost  = 0;
       if(this.weight<=15){
-        cost = new Letter().getCost('AirEastShipper',this.weight)
+        cost = this.weight*this.letter;
       }else if(this.weight>=15 && this.weight<=160){
-        cost = new Package().getCost('AirEastShipper',this.weight)
-      }else{
-        cost = new Oversized().getCost('AirEastShipper',this.weight)
+        cost = this.weight*this.package;
+      }else {
+        cost = 10+(this.weight*this.letter);
       }
       return cost;  
     }
