@@ -2,7 +2,6 @@ export class PacificParcel{
     private letter:number = 0.52;
     private package:number = 0.19;
     public weight:number;
-
     constructor(weight:number){
     this.weight = weight;
     }
