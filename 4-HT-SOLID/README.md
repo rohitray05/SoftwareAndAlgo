@@ -1,11 +1,11 @@
-1.	Identify SOLID Principles
+Identify SOLID Principles
 Choose a large open source project written in TypeScript preferably (choose another OOP language if you want: Java, C#, Ruby). You may want to look at GitHub. A project may be considered large enough if it contains at least 30 classes.
 
 Try to identify at least 3 or more (preferably) examples of the SOLID principles. Document them by filling in the table below. Note that you don't need to give code examples itself, just provide the link to file with line numbers range (or whatever you want to clearly recognize the example you describe, e.g. file hello.ts:15-36, class Foo), you can also write free text.
 
 Principle	Examples
 
-Single Responsibility Principle:
+1. Single Responsibility Principle:
 
 https://github.com/turbolinks/turbolinks/blob/master/src/error_renderer.ts    
 line number :4 Class ErrorRenderer has just one responsibility to render error message, while the logic of activating view is in Render Class.
@@ -24,7 +24,7 @@ Class has single responsibility
 https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/file-imex/file-imex.component.ts
 
 	
-Open / Closed Principle:
+2. Open / Closed Principle:
 
 https://github.com/turbolinks/turbolinks/blob/master/src/renderer.ts
 The class renderer is open for expansion and not modification and can be inherited by other renderer classes and use methods of Render Class
@@ -33,7 +33,7 @@ line number 18,29
 https://github.com/johannesjo/super-productivity/blob/master/src/app/core/persistence/persistence.model.ts
 
 
-Liskov Substitution Principle: 	
+3.  Liskov Substitution Principle: 	
 I have not found any repo with exact LSP principle but found a repo which has implementation of all SOLID principles. Others which I found I have added the link 
 https://github.com/devbootstrap/SOLID-Principles-Examples-using-Typescript/blob/master/start/src/FileStore.ts
 
@@ -42,7 +42,7 @@ https://github.com/devbootstrap/SOLID-Principles-Examples-using-Typescript/blob/
 
 
 
-Interface Seggregation Principle:
+4.  Interface Seggregation Principle:
 
 https://github.com/afteracademy/nodejs-backend-architecture-typescript/blob/master/src/types/app-request.d.ts
 Interface : RoleRequest, ProtectedRequest, 
@@ -59,7 +59,7 @@ https://github.com/johannesjo/super-productivity/blob/master/src/app/core/migrat
 Both Interfaces being used:
 https://github.com/johannesjo/super-productivity/blob/master/src/app/core/migration/legacy-persistence.sevice.ts
 
-nterface TaskWithCategoryText extends Text
+Interface TaskWithCategoryText extends Text
 line number :  153.167,114,119 all are inherited interfaces from different interface and being used at places
 https://github.com/johannesjo/super-productivity/blob/master/src/app/features/tasks/task.model.ts
 
@@ -68,7 +68,7 @@ https://github.com/johannesjo/super-productivity/blob/master/src/app/core/androi
 line number: 78,59,98,94
 https://github.com/johannesjo/super-productivity/blob/master/src/app/core/data-repair/data-repair.util.ts 
 
-Dependency Inversion Principle:	
+5. Dependency Inversion Principle:	
 
 https://github.com/turbolinks/turbolinks/blob/master/src/adapter.ts
 
@@ -84,6 +84,32 @@ https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/d
 
 
 
+VIOLATIONS AND REFACTOR 
+
+1. Single Responsibility :
+
+Violation Example: https://github.com/alemarr/solid-ts/blob/master/src/legacy/single-responsibility.ts
+Refactor Example: https://github.com/alemarr/solid-ts/blob/master/src/refactor/single-responsibility.ts
+
+2. Open / Closed Principle :
+
+Violation Example: https://github.com/alemarr/solid-ts/blob/master/src/legacy/open-closed.ts
+Refactor Example: https://github.com/alemarr/solid-ts/blob/master/src/refactor/open-closed.ts
+
+3. Liskov Substitution Principle :
+
+Violation Example: https://github.com/alemarr/solid-ts/blob/master/src/legacy/liskov-substitution.ts
+Refactor Example: https://github.com/alemarr/solid-ts/blob/master/src/refactor/liskov-substitution.ts
+
+4. Interface Seggregation Principle :
+
+Violation Example: https://github.com/alemarr/solid-ts/blob/master/src/legacy/interface-segregation.ts
+Refactor Example: https://github.com/alemarr/solid-ts/blob/master/src/refactor/interface-segregation.ts
+
+5. Dependency Inversion Principle:
+
+Violation Example: https://github.com/alemarr/solid-ts/blob/master/src/legacy/dependency-inversion.ts
+Refactor Example: https://github.com/alemarr/solid-ts/blob/master/src/refactor/dependency-inversion.ts
 
 
 
