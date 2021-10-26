@@ -9,6 +9,15 @@ Single Responsibility Principle:
 
 https://github.com/turbolinks/turbolinks/blob/master/src/error_renderer.ts    
 line number :4 Class ErrorRenderer has just one responsibility to render error message, while the logic of activating view is in Render Class.
+
+
+https://github.com/desktop/desktop/blob/development/app/src/main-process/app-window.ts
+Class: AppWindow is responsible for app opening, and actions related to app window
+
+https://github.com/desktop/desktop/blob/development/app/src/main-process/crash-window.ts
+Class: CrashWindow is responsible and the only responsibility of this class is to showcase error message 
+
+
 	
 Open / Closed Principle:
 
