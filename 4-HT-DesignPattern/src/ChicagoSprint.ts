@@ -4,7 +4,6 @@ export class ChicagoSprint implements Shipper{
     private letter:number = 0.42;
     private package:number = 0.20;
     public weight:number;
-  
     constructor(weight:number){
     this.weight = weight;
     }

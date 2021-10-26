@@ -36,3 +36,42 @@ Pacific Parcel charges 51 cents. Things are expensive in southern California!
 
 */
 
+
+
+/* interface Shippers {
+  airEastShipperCost(weight:number): number;
+  chicagoSprintCost(weight:number): number;
+  pacificParcelCost(weight:number): number;
+} */
+
+/* class getSipperCost implements Shippers{
+  public airEastShipperCost(weight:number):number{
+    return new AirEastShipper().getCost(weight);
+  }
+  public chicagoSprintCost(weight:number):number{
+    return new ChicagoSprint().getCost(weight);
+  }
+  public pacificParcelCost(weight:number):number{
+    return new PacificParcel().getCost(weight);
+  }
+} */
+
+
+
+
+
+
+/* public getCost(fromZipCode:string,weight:number):number{
+     let startsWith = fromZipCode.charAt(0);
+     let cost  = 0;
+        if(['1','2','3'].includes(startsWith)){
+          cost = this.airEastShipperCost(weight) 
+        }else if(['4','5','6'].includes(startsWith)){
+          cost = this.chicagoSprintCost(weight);
+        }else if(['7','8','9'].includes(startsWith)){
+          cost = this.pacificParcelCost(weight);
+        }else{
+          cost = this.airEastShipperCost(weight);
+        }
+    return cost;
+    } */
