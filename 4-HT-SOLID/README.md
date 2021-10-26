@@ -18,18 +18,28 @@ https://github.com/desktop/desktop/blob/development/app/src/main-process/crash-w
 Class: CrashWindow is responsible and the only responsibility of this class is to showcase error message 
 
 
+https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/dialog-get-and-enter-auth-code/dialog-get-and-enter-auth-code.component.ts
+Class has single responsibility
+
+https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/file-imex/file-imex.component.ts
+
 	
 Open / Closed Principle:
 
 https://github.com/turbolinks/turbolinks/blob/master/src/renderer.ts
 The class renderer is open for expansion and not modification and can be inherited by other renderer classes and use methods of Render Class
 
+line number 18,29
+https://github.com/johannesjo/super-productivity/blob/master/src/app/core/persistence/persistence.model.ts
 
 
 Liskov Substitution Principle: 	
+I have not found any repo with exact LSP principle but found a repo which has implementation of all SOLID principles. Others which I found I have added the link 
+https://github.com/devbootstrap/SOLID-Principles-Examples-using-Typescript/blob/master/start/src/FileStore.ts
 
-I have not found any repo with exact LSP principle but found a repo which has implementation of all SOLID principles. Others which I found I have added the link
-https://github.com/devbootstrap/SOLID-Principles-Examples-using-Typescript
+https://github.com/devbootstrap/SOLID-Principles-Examples-using-Typescript/blob/master/lsp/src/FileStore.ts
+
+
 
 
 Interface Seggregation Principle:
@@ -40,6 +50,23 @@ ProtectedRequest : https://github.com/afteracademy/nodejs-backend-architecture-t
 RoleRequest : https://github.com/afteracademy/nodejs-backend-architecture-typescript/blob/master/src/routes/v1/access/signup.ts
 
 
+SyncProviderServiceInterface  in https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/sync-provider.model.ts
+
+
+Interface LegacyAppDataComplete  is extending properties of LegacyAppBaseData
+https://github.com/johannesjo/super-productivity/blob/master/src/app/core/migration/legacy-models.ts
+
+Both Interfaces being used:
+https://github.com/johannesjo/super-productivity/blob/master/src/app/core/migration/legacy-persistence.sevice.ts
+
+nterface TaskWithCategoryText extends Text
+line number :  153.167,114,119 all are inherited interfaces from different interface and being used at places
+https://github.com/johannesjo/super-productivity/blob/master/src/app/features/tasks/task.model.ts
+
+https://github.com/johannesjo/super-productivity/blob/master/src/app/core/android/android.service.ts
+
+line number: 78,59,98,94
+https://github.com/johannesjo/super-productivity/blob/master/src/app/core/data-repair/data-repair.util.ts 
 
 Dependency Inversion Principle:	
 
@@ -47,7 +74,20 @@ https://github.com/turbolinks/turbolinks/blob/master/src/adapter.ts
 
 https://github.com/turbolinks/turbolinks/blob/master/src/browser_adapter.ts
 
-	
+The Sync Service has an interface which is responsible for all the sync operations 
+https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/sync-provider.model.ts
+
+Here it uses GoogleSync
+https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/google/google-drive-sync.service.ts
+Here it uses Dropbox
+https://github.com/johannesjo/super-productivity/blob/master/src/app/imex/sync/dropbox/dropbox-sync.service.ts
+
+
+
+
+
+
+
 The above examples have an abstraction in the interface 
 2.	Violations of SOLID and Other Principles
 Try to find at least 3 or more (preferably) violations of the SOLID principles in the project you have chosen for Problem 1 and document it. Additionally, you can describe other (DRY / KISS / YAGNI / etc.) violations.
