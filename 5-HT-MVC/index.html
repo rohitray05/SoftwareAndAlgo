@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Currency Converter</title>
+</head>
+<body>
+  <header>
+      <h3>Currency Converter</h3>
+    <div id="radio-btn" class="radio">
+        <input type="radio" id="text" name="mode" value="text">
+        <label for="html">Text Input</label>
+        <input type="radio" id="slide" name="mode" value="slide">
+        <label for="css">Slide Input</label>
+    </div>
+    </header>
+    <div id="root">
+      <div id="mode1" class="mode1">
+        <!-- EURO TO DM -->
+       <div id="Currency">
+           <h4>DM</h4>
+           <span>1 Euro is <input type="number" name="amount" id="dm"/>DM</span>
+           <div id="rate">
+               <div>
+                   <span>EURO</span>
+                   <input type="number" name="EU" id="EUDM"/>
+               </div>
+               <div>
+                <span>DM</span>
+                <input type="number" name="DM" id="DMEU"/>
+            </div>
+           </div>
+       </div>
+       <!-- EURO TO FRANC -->
+       <div id="Currency">
+        <h4>Belg. Franc</h4>
+        <span>1 Euro is <input type="number" name="amount" id="belfranc"/>Belg. Franc</span>
+        <div id="rate">
+            <div>
+                <span>EURO</span>
+                <input type="number" name="EU" id="EUBEL"/>
+            </div>
+            <div>
+             <span>Belg. Franc</span>
+             <input type="number" name="DM" id="BELEU"/>
+         </div>
+        </div>
+    </div>
+     <!-- EURO TO FRANC -->
+     <div id="Currency">
+        <h4>Franz. Franc</h4>
+        <span>1 Euro is <input type="number" name="amount" id="franzfranc"/>Franz. Franc</span>
+        <div id="rate">
+            <div>
+                <span>EURO</span>
+                <input type="number" name="EU" id="EUFR"/>
+            </div>
+            <div>
+             <span>Franz. Franc</span>
+             <input type="number" name="DM" id="FREU"/>
+         </div>
+        </div>
+    </div>
+    <!-- EURO TO Ir.Pfund -->
+    <div id="Currency">
+        <h4>Ir. Pfund</h4>
+        <span>1 Euro is <input type="number" name="amount" id="irPfund"/>Ir. Pfund</span>
+        <div id="rate">
+            <div>
+                <span>EURO</span>
+                <input type="number" name="EU" id="EUIR"/>
+            </div>
+            <div>
+             <span>Ir. Pfund</span>
+             <input type="number" name="DM" id="IREU"/>
+         </div>
+        </div>
+    </div>
+    <!-- EURO TO Ital. Lira -->
+    <div id="Currency">
+        <h4>Ital. Lira</h4>
+        <span>1 Euro is <input type="number" name="amount" id="italLira"/>Ital. Lira</span>
+        <div id="rate">
+            <div>
+                <span>EURO</span>
+                <input type="number" name="EU" id="EUIT"/>
+            </div>
+            <div>
+             <span>Ital. Lira</span>
+             <input type="number" name="DM" id="ITEU"/>
+         </div>
+        </div>
+    </div>
+    <!-- EURO TO US. $ -->
+    <div id="Currency">
+        <h4>US $</h4>
+        <span>1 Euro is <input type="number" name="amount" id="usDollar"/>US $</span>
+        <div id="rate">
+            <div>
+                <span>EURO</span>
+                <input type="number" name="EU" id="EUUS"/>
+            </div>
+            <div>
+             <span>US $</span>
+             <input type="number" name="DM" id="USEU"/>
+         </div>
+        </div>
+    </div>
+    </div>
+      <div id = "mode2" class="mode2">
+       <!-- EURO TO DM -->
+        <div id="Currency">
+           <h4>DM</h4>
+           <span id="mode2-dm"></span>
+           <div id="rate">
+            <div>
+                <span id="mode2-EUDM"></span>
+                <input type="range" min="0" max="10000" name="EU" id="mode2-REUDM" value="0" step="0.005" />
+            </div>
+            <div>
+              <span id="mode2-DMEU"></span>
+              <input type="range" min="0" max="1000000"  name="DM" id="mode2-RDMEU" value="0" step="0.005"/>
+            </div>
+           </div>
+        </div>
+    <!-- EURO TO FRANC -->
+    <!-- <div id="Currency">
+     <h4>Belg. Franc</h4>
+     <span id="mode2-bel"></span>
+     <div id="rate">
+         <div>
+             <span>EURO</span>
+             <input type="number" name="EU" id="EUBEL"/>
+         </div>
+         <div>
+          <span>Belg. Franc</span>
+          <input type="number" name="DM" id="BELEU"/>
+      </div>
+     </div>
+ </div> -->
+  <!-- EURO TO FRANC -->
+  <!-- <div id="Currency">
+     <h4>Franz. Franc</h4>
+     <span id="mode2-fra"></span>
+     <div id="rate">
+         <div>
+             <span>EURO</span>
+             <input type="number" name="EU" id="EUFR"/>
+         </div>
+         <div>
+          <span>Franz. Franc</span>
+          <input type="number" name="DM" id="FREU"/>
+      </div>
+     </div>
+ </div> -->
+ <!-- EURO TO Ir.Pfund -->
+ <!-- <div id="Currency">
+     <h4>Ir. Pfund</h4>
+     <span id="mode2-ir"></span>
+     <div id="rate">
+         <div>
+             <span>EURO</span>
+             <input type="number" name="EU" id="EUIR"/>
+         </div>
+         <div>
+          <span>Ir. Pfund</span>
+          <input type="number" name="DM" id="IREU"/>
+      </div>
+     </div>
+ </div> -->
+ <!-- EURO TO Ital. Lira -->
+ <!-- <div id="Currency">
+     <h4>Ital. Lira</h4>
+     <span id="mode2-it"></span>
+     <div id="rate">
+         <div>
+             <span>EURO</span>
+             <input type="number" name="EU" id="EUIT"/>
+         </div>
+         <div>
+          <span>Ital. Lira</span>
+          <input type="number" name="DM" id="ITEU"/>
+      </div>
+     </div>
+ </div> -->
+ <!-- EURO TO US. $ -->
+ <div id="Currency">
+     <h4>US $</h4>
+     <span id="mode2-us"></span>
+     <div id="rate">
+         <div>
+             <span id="mode2-EUUS"></span>
+             <input type="range" min="0" max="10000" name="EU" id="mode2-REUUS" value="0" step="0.005"/>
+         </div>
+         <div>
+            <span id="mode2-USEU"></span>
+            <input type="range" min="0" max="1000000" name="EUUS" id="mode2-RUSEU" value="0" step="0.005"/>
+      </div>
+     </div>
+ </div>
+</div>
+</div>
+</body>
+<script src="script.js"></script>
+</html>
