@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #0b5394;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#layout{
+    margin: 1.2rem;
+    border: 1px solid grey;
+    background-color: #a69eb0;
+}
+
+.radio{
+    height: 1.2em;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+header > h3{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+div#Currency{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1.5px solid grey;
+    background-color: #a69eb0;
+    margin: 1rem;
+}
+div#Currency> h4,span{
+    margin: 5px;
+    padding: 2px; 
+}
+div#rate{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 5px;
+    padding: 2px;
+}
+
+div#rate > div {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 2px;
+}
