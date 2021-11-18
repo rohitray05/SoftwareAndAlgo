@@ -67,7 +67,7 @@ class PriorityQueue extends Heap{
     constructor(iterable = [], comparator = (a, b) => a.priority - b.priority) {
         super(comparator);
         Array.from(iterable).forEach((el) => {
-            console.log(el.title + ' with Priority ' + el.priority)
+            //console.log(el.title + ' with Priority ' + el.priority)
             this.add(el)
         });
     }
@@ -78,6 +78,7 @@ class PriorityQueue extends Heap{
 
     dequeue(){
         let obj = super.remove()
+        console.log('----Output----')
         console.log(obj.title + 'with Priority as ' + obj.priority);
     }
 }
