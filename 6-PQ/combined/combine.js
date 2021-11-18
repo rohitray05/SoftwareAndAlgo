@@ -78,8 +78,7 @@ class PriorityQueue extends Heap{
 
     dequeue(){
         let obj = super.remove()
-        console.log('----Output----')
-        console.log(obj.title + 'with Priority as ' + obj.priority);
+        console.log(obj.title + ' with Priority as ' + obj.priority);
     }
 }
 
@@ -106,6 +105,7 @@ class Runner {
     }
 
     executeJobs(queue){
+        console.log('----Output----')
         for(let i=0;i<10;i++){
             queue.dequeue()
         }
